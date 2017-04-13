@@ -1,13 +1,10 @@
 package co.dift.ui.sample;
 
-import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.util.List;
 
@@ -23,14 +20,12 @@ public class BooksAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     public class BookViewHolder extends SwipeToAction.ViewHolder<Book> {
         public TextView titleView;
         public TextView authorView;
-        public SimpleDraweeView imageView;
 
         public BookViewHolder(View v) {
             super(v);
 
             titleView = (TextView) v.findViewById(R.id.title);
             authorView = (TextView) v.findViewById(R.id.author);
-            imageView = (SimpleDraweeView) v.findViewById(R.id.image);
         }
     }
 
@@ -63,7 +58,6 @@ public class BooksAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         BookViewHolder vh = (BookViewHolder) holder;
         vh.titleView.setText(item.getTitle());
         vh.authorView.setText(item.getAuthor());
-        vh.imageView.setImageURI(Uri.parse(item.getImageUrl()));
         vh.data = item;
     }
 }
