@@ -16,20 +16,9 @@ public class BooksAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     private List<Book> items;
 
 
-    /** References to the views for each data item **/
-    public class BookViewHolder extends SwipeToAction.ViewHolder<Book> {
-        public TextView titleView;
-        public TextView authorView;
-
-        public BookViewHolder(View v) {
-            super(v);
-
-            titleView = (TextView) v.findViewById(R.id.title);
-            authorView = (TextView) v.findViewById(R.id.author);
-        }
-    }
-
-    /** Constructor **/
+    /**
+     * Constructor
+     **/
     public BooksAdapter(List<Book> items) {
         this.items = items;
     }
@@ -59,5 +48,20 @@ public class BooksAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         vh.titleView.setText(item.getTitle());
         vh.authorView.setText(item.getAuthor());
         vh.data = item;
+    }
+
+    /**
+     * References to the views for each data item
+     **/
+    public class BookViewHolder extends SwipeToAction.ViewHolder<Book> {
+        public TextView titleView;
+        public TextView authorView;
+
+        public BookViewHolder(View v) {
+            super(v);
+
+            titleView = (TextView) v.findViewById(R.id.title);
+            authorView = (TextView) v.findViewById(R.id.author);
+        }
     }
 }

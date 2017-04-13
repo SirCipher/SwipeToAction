@@ -66,7 +66,9 @@ public class SwipeToAction {
     private Queue<Integer> swipeQueue = new LinkedList<>();
 
 
-    /** Constructor **/
+    /**
+     * Constructor
+     **/
 
     public SwipeToAction(RecyclerView recyclerView, SwipeListener swipeListener) {
         this.recyclerView = recyclerView;
@@ -76,7 +78,9 @@ public class SwipeToAction {
     }
 
 
-    /** Private methods **/
+    /**
+     * Private methods
+     **/
 
     private void init() {
         recyclerView.setOnTouchListener(new View.OnTouchListener() {
@@ -272,7 +276,7 @@ public class SwipeToAction {
 
             if (diffX <= 5 && diffY <= 5) {
                 int pressTime = (int) (upTime - downTime);
-                if  (pressTime > LONG_PRESS_TIME) {
+                if (pressTime > LONG_PRESS_TIME) {
                     swipeListener.onLongClick(touchedViewHolder.getItemData());
                 } else {
                     swipeListener.onClick(touchedViewHolder.getItemData());
@@ -348,12 +352,12 @@ public class SwipeToAction {
                     }
 
                     @Override
-                    public void onAnimationCancel (Animator animation){
+                    public void onAnimationCancel(Animator animation) {
                         runningAnimationsOn.remove(animated);
                     }
 
                     @Override
-                    public void onAnimationRepeat (Animator animation){
+                    public void onAnimationRepeat(Animator animation) {
                         runningAnimationsOn.add(animated);
                     }
                 }).x(frontViewX - frontViewW);
@@ -381,7 +385,9 @@ public class SwipeToAction {
     }
 
 
-    /** Exposed methods **/
+    /**
+     * Exposed methods
+     **/
 
     public void swipeLeft(int position) {
         // workaround in case a swipe call while dragging
@@ -406,19 +412,27 @@ public class SwipeToAction {
     }
 
 
-    /** Public interfaces & classes */
+    /**
+     * Public interfaces & classes
+     */
 
     public interface SwipeListener<T extends Object> {
         boolean swipeLeft(T itemData);
+
         boolean swipeRight(T itemData);
+
         void onClick(T itemData);
+
         void onLongClick(T itemData);
     }
 
     public interface IViewHolder<T extends Object> {
         View getFront();
+
         View getRevealLeft();
+
         View getRevealRight();
+
         <T extends Object> T getItemData();
     }
 
@@ -443,7 +457,7 @@ public class SwipeToAction {
                 if (childCount < 1) {
                     throw new RuntimeException("You must provide a view with tag='front'");
                 } else {
-                    front = vg.getChildAt(childCount-1);
+                    front = vg.getChildAt(childCount - 1);
                 }
             }
 
@@ -483,6 +497,8 @@ public class SwipeToAction {
         }
 
         @Override
-        public T getItemData() { return data; }
+        public T getItemData() {
+            return data;
+        }
     }
 }
