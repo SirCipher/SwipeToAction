@@ -21,8 +21,12 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':library')
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:recyclerview-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
-    compile project(':library')
+    compile 'com.google.firebase:firebase-database:10.0.1'
 }
+
+
+apply plugin: 'com.google.gms.google-services'

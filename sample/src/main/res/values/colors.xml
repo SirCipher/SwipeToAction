@@ -6,4 +6,6 @@
     <color name="divider">#CCC</color>
     <color name="icons">#FFF</color>
     <color name="item_background">#FFF</color>
+    <color name="red">#ff6666</color>
+
 </resources>

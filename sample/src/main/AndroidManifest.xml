@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="co.dift.ui.sample" >
+    package="com.type2labs.sample" >
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -12,14 +12,18 @@
 
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
-
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+
+        <activity
+            android:name=".NewUserActivity"
+            android:label="Add User"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

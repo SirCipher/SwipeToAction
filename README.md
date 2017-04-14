@@ -1,22 +1,13 @@
-SwipeToAction
+FireBase SwipeToAction
 ================
-[![Download](https://api.bintray.com/packages/diftco/maven/swipetoaction/images/download.svg) ](https://bintray.com/diftco/maven/swipetoaction/_latestVersion)
 
+Using SwipeToAction with FireBase.
 
 An easy way to add a simple 'swipe-and-do-something' behavior to your `RecyclerView` items.
 Just like in Gmail or Inbox apps.
 
 ![SwipeToAction Sample](https://raw.githubusercontent.com/diftco/SwipeToAction/master/screenshots/swipetoaction.gif)
 
-### Integration
-The lib is available on Maven Central, you can find it with [Gradle, please](http://gradleplease.appspot.com/#swipetoaction)
-
-```
-dependencies {
-    compile 'co.dift.ui.swipetoaction:library:1.1'
-}
-
-```
 
 ### Usage
 

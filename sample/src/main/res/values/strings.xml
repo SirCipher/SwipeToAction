@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SwipeToAction</string>
+    <string name="add_user">Add User</string>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/item_height">
+    android:layout_height="wrap_content">
 
     <!-- this view reveals when swipe right -->
     <RelativeLayout
@@ -25,7 +25,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/primary"
+        android:background="@color/red"
         android:tag="reveal-left">
 
         <ImageView
@@ -47,23 +47,37 @@
         android:padding="@dimen/item_padding"
         android:tag="front">
 
-
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/image"
             android:singleLine="true"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/author"
+            android:id="@+id/location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/title"
-            android:layout_below="@+id/title"
-            android:textSize="14dp" />
+            android:layout_alignLeft="@+id/name"
+            android:layout_below="@+id/name"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/location"
+            android:layout_below="@+id/location"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/uid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/age"
+            android:layout_below="@+id/age"
+            android:textSize="14sp" />
     </RelativeLayout>
 
 
